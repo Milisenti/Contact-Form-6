@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Our Locksmith Experts</title>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeFhZcrAAAAALEX9tNW3tyVjNen1cfiW-LLMq8L"></script>
+    <script id="clearout-js-widget" src="https://clearout.io/jswidget/aabe61fc709b84bcba182e39d5884cea" async></script>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #ffffff; color: #000; margin: 0; padding: 20px; }
+        .container { display: flex; max-width: 1100px; margin: auto; }
+        .form-section { flex: 1; padding: 20px; }
+        .image-section { flex: 1; background-image: url('https://via.placeholder.com/600x800'); background-size: cover; background-position: center; }
+        input, textarea { width: 100%; padding: 10px; margin: 8px 0; box-sizing: border-box; border-radius: 5px; border: 1px solid #ccc; }
+        button { background-color: #ea080c; color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #d0070b; }
+    </style>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            grecaptcha.ready(function() {
+                grecaptcha.execute('6LeFhZcrAAAAALEX9tNW3tyVjNen1cfiW-LLMq8L', {action: 'submit'}).then(function(token) {
+                    document.getElementById('recaptchaResponse').value = token;
+                    document.getElementById('contactForm').submit();
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="form-section">
+        <h2>Contact Our Locksmith Experts</h2>
+        <form id="contactForm" action="https://formsubmit.co/ehservicespro@gmail.com" method="POST" onsubmit="submitForm(event)">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="tel" name="phone" placeholder="Your Phone" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <div class="image-section"></div>
+</div>
+</body>
+</html>
